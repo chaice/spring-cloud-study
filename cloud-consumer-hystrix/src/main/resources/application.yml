@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: cloud-consumer
+
+server:
+  port: 10001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8001/eureka/
+
+feign:
+  hystrix:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

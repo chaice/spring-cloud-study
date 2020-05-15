@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: hystrix-turbine-dashboard
+
+server:
+  port: 11001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8001/eureka/
+
+turbine:
+  #监控哪些服务
+  app-config: node1,node2
+  #指定集群名称
+  cluster-name-expression: new String("default")
+  #指定聚合哪些集群
+  aggregator:
+    cluster-config: default

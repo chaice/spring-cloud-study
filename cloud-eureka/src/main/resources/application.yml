@@ -1,0 +1,15 @@
+server:
+  port: 8001
+
+eureka:
+  client:
+    #是否从eureka server获取注册信息
+    fetch-registry: true
+    #是否将自己注册到eureka server
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://peer1:8001/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+  instance:
+    hostname: peer1

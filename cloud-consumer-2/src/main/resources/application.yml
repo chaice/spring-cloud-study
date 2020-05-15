@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: node2
+
+server:
+  port: 10002
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8001/eureka/
+
+feign:
+  hystrix:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

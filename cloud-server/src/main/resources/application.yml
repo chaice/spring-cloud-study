@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/chaice/spring-cloud.git
+          search-paths: cloud-base
+          username: 576237121@qq.com
+          password: Qq2889144
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8001/eureka/

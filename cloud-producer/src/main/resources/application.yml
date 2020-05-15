@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: cloud-producer
+
+server:
+  port: 9001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8001/eureka/
