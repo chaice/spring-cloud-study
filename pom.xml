@@ -18,11 +18,15 @@
         <module>cloud-turbine</module>
         <module>cloud-consumer-hystrix</module>
         <module>cloud-config-consumer</module>
+        <module>cloud-config-consumer-bus</module>
+        <module>cloud-server-bus</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <java.version>1.8</java.version>
         <version.type>SNAPSHOT</version.type>
         <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
@@ -75,10 +79,6 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-turbine</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

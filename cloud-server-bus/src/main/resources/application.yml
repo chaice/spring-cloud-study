@@ -1,0 +1,31 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/chaice/spring-cloud.git
+          search-paths: cloud-base
+          username: 576237121@qq.com
+          password: Qq2889144
+  rabbitmq:
+    host: 47.100.2.208
+    port: 5672
+    username: cc
+    password: Qq2889144
+    virtual-host: /test
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8001/eureka/

@@ -1,0 +1,12 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: cloud-bus
+  rabbitmq:
+    host: 47.100.2.208
+    port: 5672
+    username: cc
+    password: Qq2889144
+    virtual-host: /test
